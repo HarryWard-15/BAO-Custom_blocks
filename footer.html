@@ -1,0 +1,22 @@
+<!-- Code to align campaign details  -->
+<script>
+  $("#list-details2").insertAfter($("#tocolumn1"));
+  $("#list-details8").insertAfter($("#tocolumn2"));
+  $("#list-details9").insertAfter($("#tocolumn3"));
+  $("#list-details7").insertAfter($("#tocolumn4"));
+</script>
+
+<!-- Code for hiding/showing different menus  -->
+<script>
+let path = window.location;
+let headerHome = document.querySelector("#home-header6");
+let headerPortal = document.querySelector("#home-header3");
+let headerPortalSmall = document.querySelector("#home-header5");
+
+if (path.pathname == "/") {
+    headerPortal.remove();
+    headerPortalSmall.remove();
+} else {
+    headerHome.remove();
+}
+</script>
