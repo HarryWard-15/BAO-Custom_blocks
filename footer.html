@@ -1,63 +1,37 @@
-<style>
-  .column {
-    float: left;
-    max-width: var(--_1es1u5v31);
-  }
+<script>
+if (window.location.href.includes("/campaign-details")) {
+  $("#list-details2").insertAfter($("#tocolumn1"));
+  $("#list-details8").insertAfter($("#tocolumn2"));
+  $("#list-details9").insertAfter($("#tocolumn3"));
+  $("#list-details7").insertAfter($("#tocolumn4"));
+}
+else if (window.location.href.includes("/professional-team")) {
+  $("#list-details3").insertAfter($("#tocolumn1"));
+  $("#list-details5").insertAfter($("#tocolumn3"));
+  $("#list-details6").insertAfter($("#tocolumn2"));
+  $("#list-details10").insertAfter($("#tocolumn5"));
+  $("#list-details7").insertAfter($("#tocolumn4"));
+}
+</script>
+<script>
+let path = window.location;
+let headerHome = document.querySelector("#home-header6");
+let headerPortal = document.querySelector("#home-header3");
+let headerPortalSmall = document.querySelector("#home-header5");
 
-  .column-1, .column-2, .column-3, .column-4 {
-    width: 25%;
-  }
-   .column-5, .column-6 {
-    width: 50%;
-  }
-   .column-7, .column-8, .column-9 {
-    width: 33.33%;
-  }
+if (path.pathname == "/") {
+    headerPortal.remove();
+    headerPortalSmall.remove();
+} else {
+    headerHome.remove();
+}
+</script>
 
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .custom-code-block {
-      padding-bottom: 5rem;
-  }
-  .custom-code-block .column > div {
-      height: 100%;
-      & section {
-          height: 100%;
-          & > div {
-            height: 100%;
-            & > div {
-              height: 100%;
-              & > div {
-                  height: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-between;
-                  & div {
-                      flex-grow: 0;
-                  }
-                }
-            }
-          }
-      }
-  }
-  ._15bqpe6h ._1s5ng9i0 {
-      & ._9ovxjx1 {
-          display: block !important;
-      }
-  }
-
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .column {
-      width: 50%;
-    }
-  }
-</style>
+<script>
+if (window.location.href.includes("/campaign-details")) {
+    var elements = document.querySelectorAll("._1s5ng9i0");
+    elements.forEach(function(element) {
+        element.style.textAlign = "left";
+    });
+}
+</script>
